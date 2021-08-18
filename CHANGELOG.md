@@ -7,6 +7,7 @@
 ### Changed
 
 * Fixed typo in `chaos init` prompt from `reognised` to `recognised`
+* Fixed typo of `--hypothesis-strategy continously` to `continuously`
 
 ## [1.9.2][] - 2021-08-16
 
