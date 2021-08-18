@@ -179,6 +179,9 @@ def run(ctx: click.Context, source: str, journal_path: str = "./journal.json",
     settings.setdefault(
         "runtime", {}).setdefault("rollbacks", {}).setdefault(
             "strategy", rollback_strategy)
+    # for backward compatibility
+    if hypothesis_strategy == "continously":
+        hypothesis_strategy = "continuously"
     hypothesis_strategy = Strategy.from_string(hypothesis_strategy)
     schedule = Schedule(
         continous_hypothesis_frequency=hypothesis_frequency,
